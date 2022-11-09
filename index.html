@@ -51,6 +51,7 @@
           overflow: hidden;
         }
       </style>
+      </dl>
     </header>
     <!-- h2>lorem2^p>lorem -->
     <h2>Lorem, ipsum.</h2>
@@ -61,4 +62,22 @@
       consectetur nobis enim.
     </p>
   </body>
+  <dl x-data="{Test1IsOpen: false}">
+    <dt @click="Test1IsOpen = ! Test1IsOpen">Lorem.</dt>
+    <div id="Test1" x-show="Test1IsOpen" x-transition:enter.duration.500ms x-transition:leave.duration.400ms>
+      <dd>Lorem ipsum dolor sit amet.</dd>
+    </div>
+  </dl>
+  <dl x-data="{Test2IsOpen: false}">
+    <dt @click="Test2IsOpen = ! Test2IsOpen">Gaspard</dt>
+    <div id="Test2" x-show="Test2IsOpen" x-transition:enter.duration.500ms x-transition:leave.duration.400ms>
+      <dd>Le plus bo</dd>
+    </div>
+  </dl>
+  <dl x-data="{Test3IsOpen: false}">
+    <dt @click="Test3IsOpen = ! Test3IsOpen">Les MMIs</dt>
+    <div id="Test3" x-show="Test3IsOpen" x-transition:enter.duration.500ms x-transition:leave.duration.400ms>
+      <dd>Les Bests</dd>
+    </div>
+  </dl>
 </html>
