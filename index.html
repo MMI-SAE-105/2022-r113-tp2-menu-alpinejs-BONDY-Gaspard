@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen : false}">
+<html lang="fr" x-data="{menuIsOpen : false}" :class="{noscroll:menuIsOpen,}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -31,6 +31,26 @@
         </ul>
       </nav>
       <script defer src="https://unpkg.com/alpinejs"></script>
+      <style>
+        .menu {
+          position: fixed; /* reste en place lors du défilement */
+          top: 0; /* fixe le menu en haut de la page */
+          left: 0;
+          width: 100vw; /* largeur de la fenêtre */
+          height: 100vh; /* hauteur de la fenêtre */
+          background: #fff; /*couleur de fond */
+          display: grid; /* grille (pour centrer) */
+          place-content: center; /* alignement au centre (V et H) */
+        }
+        .header_menuBtn {
+          position: relative; /* pour appliquer z-index */
+          z-index: 10; /* pour que le bouton soit au dessus du menu */
+        }
+        .noscroll,
+        .noscrollbody {
+          overflow: hidden;
+        }
+      </style>
     </header>
     <!-- h2>lorem2^p>lorem -->
     <h2>Lorem, ipsum.</h2>
